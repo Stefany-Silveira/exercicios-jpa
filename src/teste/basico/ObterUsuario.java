@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class NovoUsuario {
+public class ObterUsuario {
 
     public static void main(String[] args) {
 
@@ -14,15 +14,10 @@ public class NovoUsuario {
                 .createEntityManagerFactory("exercicios-jpa");
         EntityManager em = emf.createEntityManager();
 
-        Usuario novoUsuario = new Usuario("Leo", "leo@gmail.com");
-
-        em.getTransaction().begin(); //iniciar transação
-        em.persist(novoUsuario); //gerar um insert
-        em.getTransaction().commit(); //efetivar transação no banco de dados
-
-        System.out.println("O Id gerado foi: " + novoUsuario.getId());
+        Usuario usuario = em.find(Usuario.class, 7L);
+        System.out.println(usuario.getNome());
 
         em.close();
         emf.close();
-     }
+    }
 }
