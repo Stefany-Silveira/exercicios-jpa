@@ -1,4 +1,4 @@
-# Java: Exercícios JPA (Hibernate);
+# Java: Exercícios JPA (Hibernate)
 
 Este repositório é voltado para os exercicíos do módulo de JPA realizados no curso de Java da Cod3r. Nestes exercícios utilizamos o sistema gerenciado de bancos de dados MySQL.
 
